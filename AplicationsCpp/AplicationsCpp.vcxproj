@@ -25,7 +25,7 @@
     <ClInclude Include="TreesC\QueueC.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="SortingTechniques\BubbleSort.cpp" />
+    <ClCompile Include="SortingTechniques\SelectionSort.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>

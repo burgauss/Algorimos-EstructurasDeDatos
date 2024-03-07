@@ -29,7 +29,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="SortingTechniques\BubbleSort.cpp">
+    <ClCompile Include="SortingTechniques\SelectionSort.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
