@@ -47,7 +47,7 @@ void insertionSort(int A[], int n)
 	}
 }
 
-void SelectionSort(int A[], int n)
+void selectionSort(int A[], int n)
 {
 	int i, j, k;
 
@@ -68,7 +68,7 @@ int main()
 	int A[] = { 3,7,9,10,6,5,12,4,11,2 };
 	int n = 10;
 
-	insertionSort(A, 10);
+	selectionSort(A, 10);
 
 	//displaying elements
 	for (int i = 0; i < 10; i++)
