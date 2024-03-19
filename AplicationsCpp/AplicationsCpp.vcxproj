@@ -25,7 +25,7 @@
     <ClInclude Include="TreesC\QueueC.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="SortingTechniques\QuickSort.cpp" />
+    <ClCompile Include="SortingTechniques\RecursiveMergeSort.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
