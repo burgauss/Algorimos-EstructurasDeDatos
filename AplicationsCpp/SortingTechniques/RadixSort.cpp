@@ -3,6 +3,8 @@
 #include <stdlib.h>
 #include <cmath>
 
+const int MAX_DIGITS = 10;
+
 class Node
 {
 public:
@@ -32,6 +34,7 @@ int countDigits(int x) {  /// This Function Counts the Digits
 	return count;  /// return the count
 }
 
+
 void Insert(Node** ptrBins, int val, int idx)
 {
 	Node* t = new Node();
@@ -53,10 +56,10 @@ void Insert(Node** ptrBins, int val, int idx)
 	}
 }
 
-int Delete(Node** ptrBins, int val)
+int Delete(Node** ptrBins, int idx)
 {
-	Node* p = ptrBins[val];	  //ptrBins[val] is head ptr
-	ptrBins[val] = ptrBins[val]->next;
+	Node* p = ptrBins[idx];	  //ptrBins[val] is head ptr
+	ptrBins[idx] = ptrBins[idx]->next;
 	int x = p->data;
 	delete p;
 	return x;
@@ -64,28 +67,31 @@ int Delete(Node** ptrBins, int val)
 
 void RadixSort(int A[], int n)
 {
-	Node** Bins = new Node*[10];
+	int max, i, j;
 
-	int max = findMax(A, n);
+	max = findMax(A, n);
 	int nPass = countDigits(max);
 
-	for (int i = 0; i < 10; i++)
-	{
-		Bins[i] = NULL;
-	}
-
+	Node** Bins;
+	Bins = new Node * [MAX_DIGITS];
+	
 	for (int pass = 0; pass < nPass; pass++)
 	{
-		for (int i = 0; i < n; i++)
+		for (i = 0; i < MAX_DIGITS; i++)
 		{
-			int binIdx = (int)(A[i] / pow(10, i)) % 10;
+			Bins[i] = NULL;
+		}
+
+		for (i = 0; i < n; i++)
+		{
+			int binIdx = (int)(A[i] / pow(10, pass)) % 10;
 			Insert(Bins, A[i], binIdx);
 
 		}
 
-		int i = 0;
-		int j = 0;
-		while (i < 10)
+		i = 0;
+		j = 0;
+		while (i < MAX_DIGITS)
 		{
 			while (Bins[i] != NULL)
 			{
@@ -93,29 +99,26 @@ void RadixSort(int A[], int n)
 			}
 			i++;
 		}
-		for (int i = 0; i < n; i++)
-		{
-			Bins[i] = NULL;
-		}
-
 	}
+
 	delete[] Bins;
+
 
 }
 
 int main()
 {
 	int A[] = { 3,3,7,9,10,6,5,12,4,11,2 };
-	int n = 11;
+	int n = sizeof(A) / sizeof(A[0]); /// Calculating the number of elements
 
 	RadixSort(A, n);
 
 	//displaying elements
-	//for (int i = 0; i < n; i++)
-	//{
-	//	printf("%d ", A[i]);
-	//}
-	//printf("\n");
+	for (int i = 0; i < n; i++)
+	{
+		printf("%d ", A[i]);
+	}
+	printf("\n");
 
 	return 0;
 }
