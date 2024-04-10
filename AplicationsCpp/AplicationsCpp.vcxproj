@@ -19,13 +19,14 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Hashing\Chains.h" />
     <ClInclude Include="TreesCIterative\QueueC.h" />
     <ClInclude Include="TreesCIterative\Stack.h" />
     <ClInclude Include="TreesCpp\QueueCpp.h" />
     <ClInclude Include="TreesC\QueueC.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="SortingTechniques\ShellSort.cpp" />
+    <ClCompile Include="Hashing\Chaining.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>

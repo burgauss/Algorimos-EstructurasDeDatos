@@ -27,9 +27,12 @@
     <ClInclude Include="TreesCIterative\Stack.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Hashing\Chains.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="SortingTechniques\ShellSort.cpp">
+    <ClCompile Include="Hashing\Chaining.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
