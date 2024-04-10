@@ -116,38 +116,42 @@ void InsertSorted(struct Node** H, int x)
 		}
 	}
 }
-//
-//int Delete(struct Node* p, int index)
-//{
-//	struct Node* q = NULL;
-//	int x = -1;
-//
-//	if (index < 1 || index > count(p))
-//		return -1;
-//	if (index == 1)
-//	{
-//		q = first;
-//		x = first->data;
-//		first = first->next;
-//		delete q;
-//		return x;
-//	}
-//	else
-//	{
-//		for (int i = 0; i < index - 1; i++)
-//		{
-//			q = p;
-//			p = p->next;
-//
-//		}
-//		q->next = p->next;
-//		x = p->data;
-//		delete p;
-//		return x;
-//
-//	}
-//
-//}
+
+int Delete(struct Node** H, int key)
+{
+	struct Node* q = NULL;
+	int x = -1;
+	struct Node* p = *H;  //header pointer
+	int i = 0;
+	// getting the position of the key
+	while (p && p->data != key)
+	{
+		q = p;
+		p = p->next;
+		i++;
+	}
+	
+	int index = i;
+
+	if (index == 0)
+	{
+		q = p;
+		x = p->data;
+		*H = p->next;
+		delete q;
+ 		return x;
+	}
+	else
+	{
+
+		q->next = p->next;
+		x = p->data;
+		delete p;
+		return x;
+
+	}
+
+}
 
 //bool IsSorted(struct Node* p)
 //{
