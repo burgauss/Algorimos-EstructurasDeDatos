@@ -32,7 +32,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Hashing\Chaining.cpp">
+    <ClCompile Include="Hashing\LinearProbing.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
