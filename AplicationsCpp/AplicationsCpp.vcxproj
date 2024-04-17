@@ -27,7 +27,7 @@
     <ClInclude Include="TreesC\QueueC.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Graphs\main.cpp" />
+    <ClCompile Include="Graphs\PrimsAlgorithms.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
