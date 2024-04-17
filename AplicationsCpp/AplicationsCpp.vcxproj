@@ -19,6 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Graphs\Queue.h" />
     <ClInclude Include="Hashing\Chains.h" />
     <ClInclude Include="TreesCIterative\QueueC.h" />
     <ClInclude Include="TreesCIterative\Stack.h" />
@@ -26,7 +27,7 @@
     <ClInclude Include="TreesC\QueueC.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Hashing\LinearProbing.cpp" />
+    <ClCompile Include="Graphs\main.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>

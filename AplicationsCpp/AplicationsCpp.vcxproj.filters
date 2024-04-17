@@ -30,9 +30,12 @@
     <ClInclude Include="Hashing\Chains.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Graphs\Queue.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Hashing\LinearProbing.cpp">
+    <ClCompile Include="Graphs\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
